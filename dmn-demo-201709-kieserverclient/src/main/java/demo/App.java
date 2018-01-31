@@ -12,11 +12,11 @@ import org.kie.server.client.KieServicesFactory;
 
 public class App {
 
-    private static final String URL = "http://localhost:8230/kie-server/services/rest/server";
+    private static final String URL = "http://localhost:8080/kie-server/services/rest/server";
     private static final String USER = "kieserver";
-    private static final String PASSWORD = "kieserver";
+    private static final String PASSWORD = "kieserver1!";
 
-    private static final MarshallingFormat FORMAT = MarshallingFormat.JAXB;
+    private static final MarshallingFormat FORMAT = MarshallingFormat.XSTREAM;
 
     private KieServicesConfiguration conf;
     private KieServicesClient kieServicesClient;
@@ -36,7 +36,7 @@ public class App {
         dmnContext.set("Age", 23);
         dmnContext.set("had previous incidents", false);
 
-        String containerId = "demo1";
+        String containerId = "dmn-demo-201709";
         ServiceResponse<DMNResult> serverResp = dmnClient.evaluateAll(containerId, dmnContext);
 
         DMNResult dmnResult = serverResp.getResult();

@@ -6,7 +6,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <kie-version>7.3.0.Final</kie-version>
+    <kie-version>7.5.0.Final</kie-version>
     <slf4j-version>1.7.7</slf4j-version>
     <junit-version>4.12</junit-version>
   </properties>
@@ -35,6 +35,11 @@
     <dependency>
       <groupId>org.kie.server</groupId>
       <artifactId>kie-server-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j-version}</version>
     </dependency>
   </dependencies>
 
